@@ -1,6 +1,6 @@
 <h1 class="mat-h1">Hello ng-de !</h1>
 
-<nav mat-tab-nav-bar class="main-nav">
+<nav class="main-nav" mat-tab-nav-bar fitInkBarToContent [tabPanel]="tabPanel">
   @for (d of demos; track d.link) {
     <a mat-tab-link
        routerLink="{{d.link}}"
@@ -8,4 +8,6 @@
        [active]="activeLink == d.link"> {{d.label}} </a>
   }
 </nav>
+<mat-tab-nav-panel #tabPanel>
 <router-outlet/>
+</mat-tab-nav-panel>
