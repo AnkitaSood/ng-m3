@@ -1,0 +1,32 @@
+@use "@angular/material" as mat;
+
+@mixin notifications-banner-theme($theme) {
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $success-colors: mat.define-palette(mat.$green-palette, 400);
+  $warning-colors: mat.define-palette(mat.$amber-palette, 400);
+
+  .error {
+    --mdc-outlined-button-outline-color: #{mat.get-color-from-palette($warn)};
+    --mdc-outlined-button-label-text-color: #{mat.get-color-from-palette($warn)};
+    --mdc-snackbar-container-color: #{mat.get-color-from-palette($warn)};
+  }
+
+  .info {
+    --mdc-outlined-button-outline-color: #{mat.get-color-from-palette($accent)};
+    --mdc-outlined-button-label-text-color: #{mat.get-color-from-palette($accent)};
+    --mdc-snackbar-container-color: #{mat.get-color-from-palette($accent)};
+  }
+
+  .success {
+    --mdc-outlined-button-outline-color: #{mat.get-color-from-palette($success-colors)};
+    --mdc-outlined-button-label-text-color: #{mat.get-color-from-palette($success-colors)};
+    --mdc-snackbar-container-color: #{mat.get-color-from-palette($success-colors)};
+  }
+
+  .warn {
+    --mdc-outlined-button-outline-color: #{mat.get-color-from-palette($warning-colors)};
+    --mdc-outlined-button-label-text-color: #{mat.get-color-from-palette($warning-colors)};
+    --mdc-snackbar-container-color: #{mat.get-color-from-palette($warning-colors)};
+  }
+}
