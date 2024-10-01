@@ -5,9 +5,9 @@
     <a mat-tab-link
        routerLink="{{d.link}}"
        (click)="activeLink = d.link"
-       [active]="activeLink == d.link"> {{d.label}} </a>
+       [active]="activeLink == d.link"> {{ d.label }} </a>
   }
 </nav>
 <mat-tab-nav-panel #tabPanel>
-<router-outlet/>
+  <router-outlet/>
 </mat-tab-nav-panel>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {MatTabLink, MatTabNav, MatTabNavPanel} from "@angular/material/tabs";
 
