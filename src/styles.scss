@@ -25,9 +25,7 @@
   @include custom-components-theme(dt.$dark-theme);
   html {
     --mat-app-background-color: #0F4C5C;
-    --mdc-elevated-card-container-color: #196E84;
     --mat-app-text-color: #C0EAF5;
-    --mat-tab-header-inactive-label-text-color: #D9F6FD;
   }
 }
 
@@ -41,4 +39,6 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   padding: 1rem;
   box-sizing: border-box;
+  --mdc-outlined-card-container-color: transparent;
+
 }
