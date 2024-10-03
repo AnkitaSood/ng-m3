@@ -8,6 +8,7 @@ import {
   MatCardTitle
 } from "@angular/material/card";
 import {MatButton} from "@angular/material/button";
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   standalone: true,
@@ -19,7 +20,8 @@ import {MatButton} from "@angular/material/button";
     MatCardHeader,
     MatCardActions,
     MatButton,
-    MatCardImage
+    MatCardImage,
+    NgOptimizedImage,
   ],
   templateUrl: './cards-collection.component.html',
   styleUrl: './cards-collection.component.scss'
