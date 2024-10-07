@@ -35,20 +35,20 @@ $dark-primary-palette: (
 
 /* Dark Accent */
 $dark-accent-palette: (
-  50 : #fff1e5,
-  100 : #fedcbd,
-  200 : #fdc592,
-  300 : #fcae66,
-  400 : #fc9c45,
-  500 : #fb8b24,
-  600 : #fa8320,
-  700 : #fa781b,
-  800 : #f96e16,
-  900 : #f85b0d,
+  50 : #fcf8ed,
+  100 : #f8edd2,
+  200 : #f4e2b5,
+  300 : #f0d697,
+  400 : #eccd80,
+  500 : #e9c46a,
+  600 : #e6be62,
+  700 : #e3b657,
+  800 : #dfaf4d,
+  900 : #d9a23c,
   A100 : #ffffff,
   A200 : #ffffff,
   A400 : #ffffff,
-  A700 : #fff0ee,
+  A700 : #fff4e8,
   contrast: (
     50 : #000000,
     100 : #000000,
@@ -137,41 +137,43 @@ $dark-warn-palette: (
 
 /* Dark Success */
 $dark-success-palette: (
-  50: #E8F5E9,
-  100: #C8E6C9,
-  200: #A5D6A7,
-  300: #81C784, /* Main Success */
-  400: #66BB6A,
-  500: #4CAF50,
-  600: #43A047,
-  700: #388E3C,
-  800: #2E7D32,
-  900: #1B5E20,
-  A100: #B9F6CA,
-  A200: #69F0AE,
-  A400: #00E676,
-  A700: #00C853,
+  50 : #e5f3f2,
+  100 : #bfe2dd,
+  200 : #95cec7,
+  300 : #6abab1,
+  400 : #4aaca0,
+  500 : #2a9d8f,
+  600 : #259587,
+  700 : #1f8b7c,
+  800 : #198172,
+  900 : #0f6f60,
+  A100 : #ccffec,
+  A200 : #99ffd9,
+  A400 : #66ffc6,
+  A700 : #4cffbd,
   contrast: (
-    50: #2e2e2e,
-    100: #2e2e2e,
-    200: #000000,
-    300: #000000,
-    400: #ffffff,
-    500: #121212,
-    600: #ffffff,
-    700: #ffffff,
-    800: #ffffff,
-    900: #ffffff,
-    A100: #000000,
-    A200: #000000,
-    A400: #000000,
-    A700: #000000,
-  ),
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
 );
 
 $dark-primary : mat.define-palette($dark-primary-palette, 500, 100, 700);
 $dark-accent : mat.define-palette($dark-accent-palette, 600, 300, 700);
 $dark-warn: mat.define-palette($dark-warn-palette, 500, 300, 700);
+$dark-error: mat.define-palette($dark-error-palette, 500, 300, 700);
+$dark-success: mat.define-palette($dark-success-palette, 500, 300, 700);
 
 $dark-theme: mat.define-dark-theme((
   color: (
@@ -180,3 +182,5 @@ $dark-theme: mat.define-dark-theme((
     warn: $dark-warn,
   )
 ));
+
+

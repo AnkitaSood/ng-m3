@@ -172,6 +172,8 @@ $light-success-palette: (
 $light-primary: mat.define-palette($light-primary-palette, 500, 300, 700);
 $light-accent: mat.define-palette($light-accent-palette, 500, 300, 700);
 $light-warn: mat.define-palette($light-warn-palette, 500, 300, 700);
+$light-error: mat.define-palette($light-error-palette, 500, 300, 700);
+$light-success: mat.define-palette($light-success-palette, 500, 300, 700);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".

@@ -1,11 +1,12 @@
 import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {MatTabLink, MatTabNav, MatTabNavPanel} from "@angular/material/tabs";
+import {MatAnchor} from "@angular/material/button";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatTabNav, MatTabNavPanel, MatTabLink, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, MatTabNav, MatTabNavPanel, MatTabLink, RouterLink, RouterLinkActive, MatAnchor],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
