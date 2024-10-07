@@ -32,7 +32,7 @@ export class KeyValueComponent {
     <app-key-value key="Stage Name">Teddy Swims</app-key-value>
     <app-key-value key="Birthdate">September 25, 1992 (born in Atlanta, Georgia, USA).</app-key-value>
     <app-key-value key="Nationality">American.</app-key-value>
-    <app-key-value key="Debut Album">Unlearning (2021)</app-key-value>
+    <app-key-value key="Debut EP">Unlearning (2021)</app-key-value>
     <app-key-value key="Music Style">Blends soul, R&B, country, and pop.</app-key-value>
 
   `
