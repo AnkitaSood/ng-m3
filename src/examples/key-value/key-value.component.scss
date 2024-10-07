@@ -1,3 +1,7 @@
+@use "@angular/material" as mat;
+@use "../../themes/light-theme" as lt;
+@use "../../themes/dark-theme" as dt;
+
 :host {
   display: flex;
   margin-block-end: .25rem;
@@ -5,28 +9,35 @@
   .kvp-key {
     align-items: center;
     display: flex;
-    margin-right: 1.5rem;
-    max-width: 13rem;
-    min-width: 6rem;
-    width: 20%;
+    max-inline-size: 15rem;
+    min-inline-size: 6rem;
+    inline-size: 30%;
+    margin-block-end: 0;
+    padding-inline-start: .25rem;
+    background-color: mat.get-theme-color(lt.$light-theme, primary, 300);
+    color: mat.get-theme-color(lt.$light-theme, primary, 900);
   }
 
   .kvp-value {
-    width: 80%;
+    align-self: center;
+    padding: .25rem;
+    width: 70%;
+    background-color: mat.get-theme-color(lt.$light-theme, background, app-bar);
+    line-height: mat.get-theme-typography(lt.$light-theme, headline-3, line-height);
+    color: mat.get-theme-color(lt.$light-theme, primary, 900);
   }
+}
 
-  &.stacked {
-    flex-direction: column;
-    margin-bottom: .75rem;
-
+@media (prefers-color-scheme: dark) {
+  :host {
     .kvp-key {
-      max-width: none;
-      width: auto;
+      background-color: mat.get-theme-color(dt.$dark-theme, primary, 300);
+      color: mat.get-theme-color(dt.$dark-theme, primary, 900);
     }
 
     .kvp-value {
-      padding-top: .25rem;
-      width: auto;
+      background-color: mat.get-theme-color(dt.$dark-theme, background, app-bar);
+      color: mat.get-theme-color(dt.$dark-theme, primary, 900);
     }
   }
 }

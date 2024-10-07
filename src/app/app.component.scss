@@ -5,11 +5,12 @@
     display: flex;
     place-content: center;
     align-items: center;
+
+    h1 {
+      margin-bottom: 0;
+    }
   }
 
-  .mat-h1 {
-    font-size: 6rem;
-  }
   .main-nav {
     gap: 0.5rem;
     display: flex;

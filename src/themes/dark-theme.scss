@@ -1,5 +1,5 @@
 @use "@angular/material" as mat;
-
+@use 'typography' as t;
 $dark-primary-palette: (
   50 : #fcece3,
   100 : #f7d1b9,
@@ -181,6 +181,7 @@ $dark-theme: mat.define-dark-theme((
     accent: $dark-accent,
     warn: $dark-warn,
   ),
+  typography: t.$custom-typography,
   density: 0,
 ));
 

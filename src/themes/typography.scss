@@ -1,0 +1,11 @@
+@use "@angular/material" as mat;
+$font-family: Roboto, "Helvetica Neue", sans-serif;
+
+$custom-typography: mat.define-typography-config(
+  $font-family: $font-family,
+  $headline-1: mat.define-typography-level(120px, 120px, 300, $letter-spacing: -0.05em),
+  $headline-2: mat.define-typography-level(48px, 48px, 400, $letter-spacing: -0.05em),
+  $headline-3: mat.define-typography-level(32px, 32px, 400, $letter-spacing: -0.002em),
+  $headline-4: mat.define-typography-level(34px, 40px, 400),
+  $headline-5: mat.define-typography-level(24px, 32px, 400),
+);

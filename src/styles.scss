@@ -2,15 +2,16 @@
 
 @use "themes/light-theme" as lt;
 @use "themes/dark-theme" as dt;
+@use "themes/typography" as t;
 @use "./examples/notification-banner/notifications.component.theme" as notifications;
 
-@include mat.core();
-
+@include mat.typography-hierarchy(t.$custom-typography);
 @mixin custom-components-theme($theme, $error, $success) {
   @include notifications.notifications-banner-theme($theme, $error, $success);
 }
 
 @media (prefers-color-scheme: light) {
+  @include mat.core-theme(lt.$light-theme);
   @include mat.all-component-themes(lt.$light-theme);
   @include custom-components-theme(lt.$light-theme, lt.$light-error, lt.$light-success);
   html {
@@ -49,7 +50,6 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
   padding: 1rem;
   box-sizing: border-box;
 }
