@@ -15,17 +15,17 @@
   @include mat.all-component-themes(lt.$light-theme);
   @include custom-components-theme(lt.$light-theme, lt.$light-error, lt.$light-success);
   html {
-    --mdc-filled-button-container-color: #{mat.get-color-from-palette(lt.$light-primary, 100)};
-    --mdc-filled-button-label-text-color: #{mat.get-color-from-palette(lt.$light-primary, 700)};
+    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
+    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
   }
   .mat-mdc-unelevated-button:not(:disabled):hover {
-    --mdc-filled-button-container-color: #{mat.get-color-from-palette(lt.$light-primary, 700)};
-    --mdc-filled-button-label-text-color: #{mat.get-color-from-palette(lt.$light-primary, 100)};
+    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
+    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
   }
 
   .mat-mdc-unelevated-button:not(:disabled).active {
-    --mdc-filled-button-container-color: #{mat.get-color-from-palette(lt.$light-primary, 700)};
-    --mdc-filled-button-label-text-color: #{mat.get-color-from-palette(lt.$light-primary, 100)};
+    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
+    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
   }
 
 }
@@ -36,8 +36,8 @@
   html {
     --mat-app-background-color: #0f333d;
     --mat-app-text-color: #C0EAF5;
-    --mdc-filled-button-container-color: #{mat.get-color-from-palette(dt.$dark-theme, 100)};
-    --mdc-filled-button-label-text-color: #{mat.get-color-from-palette(dt.$dark-theme, 700)};
+    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(dt.$dark-theme, 100)};
+    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(dt.$dark-theme, 700)};
     --mat-filled-button-hover-state-layer-opacity: 0;
   }
 
