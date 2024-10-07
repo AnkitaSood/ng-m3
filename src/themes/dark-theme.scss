@@ -180,7 +180,8 @@ $dark-theme: mat.define-dark-theme((
     primary: $dark-primary,
     accent: $dark-accent,
     warn: $dark-warn,
-  )
+  ),
+  density: 0,
 ));
 
 

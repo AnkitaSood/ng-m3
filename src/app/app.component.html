@@ -1,23 +1,16 @@
-<h1 class="mat-h1">Hello ng-de !</h1>
-
-<!--<nav class="main-nav" mat-tab-nav-bar fitInkBarToContent [tabPanel]="tabPanel">
-  @for (d of demos; track d.link) {
-    <a mat-tab-link
-       routerLink="{{d.link}}"
-       (click)="activeLink = d.link"
-       [active]="activeLink == d.link"> {{ d.label }} </a>
-  }
-</nav>
-<mat-tab-nav-panel #tabPanel>
-
-</mat-tab-nav-panel>-->
-
+<header>
+  <h1 class="mat-h1">Hi,
+  </h1>
+  <img priority ngSrc="https://ng-de.org/assets/logo.svg" alt="conference logo" width="150" height="150">
+</header>
 <nav class="main-nav">
   @for (d of demos; track d.link) {
     <a mat-flat-button
        routerLink="{{d.link}}"
        routerLinkActive="active"
-       (click)="activeLink = d.link" > {{ d.label }} </a>
+       (click)="activeLink = d.link"> {{ d.label }} </a>
   }
 </nav>
-<router-outlet/>
+<main>
+  <router-outlet/>
+</main>

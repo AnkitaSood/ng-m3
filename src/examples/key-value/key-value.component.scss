@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  margin-block-end: .25rem;
+
+  .kvp-key {
+    align-items: center;
+    display: flex;
+    margin-right: 1.5rem;
+    max-width: 13rem;
+    min-width: 6rem;
+    width: 20%;
+  }
+
+  .kvp-value {
+    width: 80%;
+  }
+
+  &.stacked {
+    flex-direction: column;
+    margin-bottom: .75rem;
+
+    .kvp-key {
+      max-width: none;
+      width: auto;
+    }
+
+    .kvp-value {
+      padding-top: .25rem;
+      width: auto;
+    }
+  }
+}

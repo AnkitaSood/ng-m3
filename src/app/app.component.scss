@@ -1,11 +1,23 @@
 :host {
   display: block;
 
+  header {
+    display: flex;
+    place-content: center;
+    align-items: center;
+  }
+
+  .mat-h1 {
+    font-size: 6rem;
+  }
   .main-nav {
     gap: 0.5rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 8px 16px;
+  }
+
+  main {
+    margin-block-start: 1rem;
   }
 }
