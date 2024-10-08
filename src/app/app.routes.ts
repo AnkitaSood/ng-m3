@@ -13,4 +13,8 @@ export const routes: Routes = [
     path: 'custom',
     loadComponent: () => import('../examples/key-value/key-value.component').then(m => m.KeyValueExampleComponent)
   },
+  {
+    path: 'address',
+    loadComponent: () => import('../examples/customer-address/customer-address.component').then(m => m.CustomerAddressComponent)
+  },
 ];
