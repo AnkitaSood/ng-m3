@@ -14,7 +14,12 @@ export const routes: Routes = [
     loadComponent: () => import('../examples/key-value/key-value.component').then(m => m.KeyValueExampleComponent)
   },
   {
+    path: "",
+    redirectTo: "notifications",
+    pathMatch: 'full',
+  },
+/*  {
     path: 'address',
     loadComponent: () => import('../examples/customer-address/customer-address.component').then(m => m.CustomerAddressComponent)
-  },
+  },*/
 ];
