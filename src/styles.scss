@@ -11,9 +11,9 @@
 }
 
 @media (prefers-color-scheme: light) {
-  @include mat.core-theme(lt.$light-theme);
-  @include mat.all-component-themes(lt.$light-theme);
-  @include custom-components-theme(lt.$light-theme, lt.$light-error, lt.$light-success);
+  @include mat.core-theme(lt.$m2-light-theme);
+  @include mat.all-component-themes(lt.$m2-light-theme);
+  @include custom-components-theme(lt.$m2-light-theme, lt.$light-error, lt.$light-success);
   html {
     --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
     --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
@@ -31,13 +31,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  @include mat.all-component-colors(dt.$dark-theme);
-  @include custom-components-theme(dt.$dark-theme, dt.$dark-error, dt.$dark-success);
+  @include mat.all-component-colors(dt.$m2-dark-theme);
+  @include custom-components-theme(dt.$m2-dark-theme, dt.$dark-error, dt.$dark-success);
   html {
     --mat-app-background-color: #0f333d;
     --mat-app-text-color: #C0EAF5;
-    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(dt.$dark-theme, 100)};
-    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(dt.$dark-theme, 700)};
+    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(dt.$m2-dark-theme, 100)};
+    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(dt.$m2-dark-theme, 700)};
     --mat-filled-button-hover-state-layer-opacity: 0;
   }
 

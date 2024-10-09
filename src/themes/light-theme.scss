@@ -41,8 +41,8 @@ $light-accent-palette: (
   200: #FFEDB3,
   300: #FFE8A1,
   400: #FFE58F,
-  500: #F2CC8F, /* Main Accent */
-  600: #D1A76D,
+  500: #F2CC8F,
+  600: #D1A76D,/* Main Accent */
   700: #B08A5B,
   800: #8F764A,
   900: #6C5233,
@@ -177,7 +177,7 @@ $light-error: mat.m2-define-palette($light-error-palette, 500, 300, 700);
 $light-success: mat.m2-define-palette($light-success-palette, 500, 300, 700);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$light-theme: mat.m2-define-light-theme((
+$m2-light-theme: mat.m2-define-light-theme((
   color: (
     primary: $light-primary,
     accent: $light-accent,
