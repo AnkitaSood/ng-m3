@@ -1,7 +1,6 @@
 @use "@angular/material" as mat;
 
 @mixin key-value-component-theme($theme) {
-  //@debug (mat.get-theme-type($theme) == light)
 
   @if(mat.get-theme-version($theme) == 0) {
 
@@ -11,10 +10,8 @@
     }
 
     .kvp-value {
-      line-height: mat.get-theme-typography($theme, headline-3, line-height);
       background-color: mat.get-theme-color($theme, background, app-bar);
       color: mat.get-theme-color($theme, primary, 900);
-
     }
   }
 }
