@@ -1,6 +1,6 @@
 @use "@angular/material" as mat;
 
-@mixin notifications-banner-theme($theme, $error, $success: #008942) {
+@mixin notifications-banner-theme($theme, $error, $success) {
 
   // The function will return 0 for an M2 theme or 1 for an M3 theme
   //@debug mat.get-theme-version($theme);

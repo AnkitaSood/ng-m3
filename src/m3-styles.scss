@@ -1,18 +1,29 @@
 @use '@angular/material' as mat;
 @use "themes/m3-theme" as m3;
+@use "themes/light-theme" as lt;
+@use "themes/dark-theme" as dt;
 @use "./examples/notification-banner/notifications.component.theme" as notifications;
+@use "./examples/key-value/key-value.component.theme" as kv;
 
-@mixin custom-components-theme($theme, $error) {
-  @include notifications.notifications-banner-theme($theme, $error);
+@mixin custom-components-theme($theme, $error, $success: #008942) {
+  @include notifications.notifications-banner-theme($theme, $error, $success);
+  @include kv.key-value-component-theme($theme);
 }
 
 @media (prefers-color-scheme: light) {
   html {
-    @include mat.core-theme(m3.$light-theme);
-    @include mat.all-component-themes(m3.$light-theme);
+    @include mat.core-theme(lt.$m2-light-theme);
+    @include mat.all-component-themes(lt.$m2-light-theme);
+    /*@include mat.core-theme(m3.$light-theme);
+    @include mat.all-component-themes(m3.$light-theme);*/
     @include mat.color-variants-backwards-compatibility(m3.$light-theme);
     @include mat.typography-hierarchy(m3.$light-theme, $back-compat: true);
-    @include custom-components-theme(m3.$light-theme, mat.get-theme-color(m3.$light-theme, error));
+    //@include custom-components-theme(m3.$light-theme, mat.get-theme-color(m3.$light-theme, error));
+    @include custom-components-theme(lt.$m2-light-theme, lt.$light-error, lt.$light-success);
+  }
+
+  .primary-btn {
+    @include mat.button-color(m3.$light-theme, $color-variant: primary);
   }
 
   .secondary-btn {
@@ -33,6 +44,10 @@
     @include mat.color-variants-backwards-compatibility(m3.$dark-theme);
     @include mat.typography-hierarchy(m3.$dark-theme, $back-compat: true);
     @include custom-components-theme(m3.$dark-theme, mat.get-theme-color(m3.$dark-theme, error));
+
+    .primary-btn {
+      @include mat.button-color(m3.$dark-theme, $color-variant: primary);
+    }
 
     .secondary-btn {
       @include mat.button-color(m3.$dark-theme, $color-variant: secondary);
