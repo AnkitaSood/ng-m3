@@ -1,5 +1,22 @@
+@use '@angular/material' as mat;
+@use '../themes/light-theme' as lt;
+@use "../themes/dark-theme" as dt;
+
 :host {
   display: block;
+
+/*  --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
+  --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
+
+  .mat-mdc-unelevated-button:not(:disabled):hover {
+    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
+    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
+  }
+
+  .mat-mdc-unelevated-button:not(:disabled).active {
+    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
+    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
+  }*/
 
   header {
     display: flex;
@@ -22,3 +39,20 @@
     margin-block-start: 1rem;
   }
 }
+
+/*@media (prefers-color-scheme: dark) {
+  :host {
+    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(dt.$dark-primary, 100)};
+    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(dt.$dark-primary, 700)};
+
+    .mat-mdc-unelevated-button:not(:disabled):hover {
+      --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(dt.$dark-primary, 700)};
+      --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(dt.$dark-primary, 100)};
+    }
+
+    .mat-mdc-unelevated-button:not(:disabled).active {
+      --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(dt.$dark-primary, 700)};
+      --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(dt.$dark-primary, 100)};
+    }
+  }
+}*/

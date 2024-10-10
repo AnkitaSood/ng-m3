@@ -2,12 +2,12 @@ import {Routes} from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'notifications',
-    loadComponent: () => import('../examples/notification-banner/notification-banner.component').then(m => m.NotificationBannerComponent)
-  },
-  {
     path: 'cards',
     loadComponent: () => import('../examples/cards-collection/cards-collection.component').then(m => m.CardsCollectionComponent)
+  },
+  {
+    path: 'notifications',
+    loadComponent: () => import('../examples/notification-banner/notification-banner.component').then(m => m.NotificationBannerComponent)
   },
   {
     path: 'custom',
@@ -15,11 +15,11 @@ export const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "notifications",
+    redirectTo: "cards",
     pathMatch: 'full',
   },
-/*  {
-    path: 'address',
-    loadComponent: () => import('../examples/customer-address/customer-address.component').then(m => m.CustomerAddressComponent)
-  },*/
+  /*  {
+      path: 'address',
+      loadComponent: () => import('../examples/customer-address/customer-address.component').then(m => m.CustomerAddressComponent)
+    },*/
 ];

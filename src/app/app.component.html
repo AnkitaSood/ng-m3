@@ -5,7 +5,7 @@
 </header>
 <nav class="main-nav">
   @for (d of demos; track d.link) {
-    <a mat-flat-button
+    <a mat-flat-button color="accent"
        routerLink="{{d.link}}"
        routerLinkActive="active"
        (click)="activeLink = d.link"> {{ d.label }} </a>
