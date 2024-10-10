@@ -1,8 +1,8 @@
 @use "@angular/material" as mat;
 
 @mixin key-value-component-theme($theme) {
-
   //@debug (mat.get-theme-type($theme) == light)
+
   @if(mat.get-theme-version($theme) == 0) {
 
     .kvp-key {

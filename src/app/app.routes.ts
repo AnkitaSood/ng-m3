@@ -18,8 +18,8 @@ export const routes: Routes = [
     redirectTo: "cards",
     pathMatch: 'full',
   },
-  /*  {
+    {
       path: 'address',
       loadComponent: () => import('../examples/customer-address/customer-address.component').then(m => m.CustomerAddressComponent)
-    },*/
+    },
 ];

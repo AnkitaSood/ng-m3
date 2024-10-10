@@ -17,7 +17,6 @@
       --mdc-outlined-button-label-text-color: #{mat.get-theme-color($theme, tertiary)};
       --mdc-snackbar-container-color: #{mat.get-theme-color($theme, tertiary)};
     }
-
     .success {
       --mdc-outlined-button-outline-color: #{$success};
       --mdc-outlined-button-label-text-color: #{$success};

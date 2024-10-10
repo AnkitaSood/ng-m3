@@ -68,22 +68,22 @@ $light-accent-palette: (
   )
 );
 
-/* Light Error */
-$light-error-palette: (
-  50: #FFEBEE,
-  100: #FFCDD2,
-  200: #EF9A9A,
-  300: #E57373,
-  400: #EF5350, /* Main Error */
-  500: #D32F2F,
-  600: #C62828,
-  700: #B71C1C,
-  800: #B71C1C,
-  900: #B71C1C,
-  A100: #FF8A80,
-  A200: #FF5252,
-  A400: #FF1744,
-  A700: #D50000,
+/* Light Warn */
+$light-warn-palette: (
+  50: #FFF3E0,
+  100: #FFE0B2,
+  200: #FFCC80,
+  300: #FFB74D,
+  400: #FFA726, /* Main Warn */
+  500: #FF9800,
+  600: #FB8C00,
+  700: #F57C00,
+  800: #EF6C00,
+  900: #E65100,
+  A100: #FFD180,
+  A200: #FFAB40,
+  A400: #FF9100,
+  A700: #FF6D00,
   contrast: (
     50: #000000,
     100: #000000,
@@ -102,22 +102,22 @@ $light-error-palette: (
   ),
 );
 
-/* Light Warn */
-$light-warn-palette: (
-  50: #FFF3E0,
-  100: #FFE0B2,
-  200: #FFCC80,
-  300: #FFB74D,
-  400: #FFA726, /* Main Warn */
-  500: #FF9800,
-  600: #FB8C00,
-  700: #F57C00,
-  800: #EF6C00,
-  900: #E65100,
-  A100: #FFD180,
-  A200: #FFAB40,
-  A400: #FF9100,
-  A700: #FF6D00,
+/* Light Error */
+$light-error-palette: (
+  50: #FFEBEE,
+  100: #FFCDD2,
+  200: #EF9A9A,
+  300: #E57373,
+  400: #EF5350, /* Main Error */
+  500: #D32F2F,
+  600: #C62828,
+  700: #B71C1C,
+  800: #B71C1C,
+  900: #B71C1C,
+  A100: #FF8A80,
+  A200: #FF5252,
+  A400: #FF1744,
+  A700: #D50000,
   contrast: (
     50: #000000,
     100: #000000,

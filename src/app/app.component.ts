@@ -15,7 +15,7 @@ export class AppComponent {
     {link: 'cards', label: 'Cards'},
     {link: 'notifications', label: 'Notifications'},
     {link: 'custom', label: 'Custom Key Value'},
-    // {link: 'address', label: 'Customer Address'}
+    {link: 'address', label: 'Customer Address'}
   ];
   activeLink = this.demos[0].link;
 }

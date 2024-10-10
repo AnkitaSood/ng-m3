@@ -12,10 +12,8 @@
 
 @media (prefers-color-scheme: light) {
   html {
-    @include mat.core-theme(lt.$m2-light-theme);
-    @include mat.all-component-themes(lt.$m2-light-theme);
-    /*@include mat.core-theme(m3.$light-theme);
-    @include mat.all-component-themes(m3.$light-theme);*/
+    @include mat.core-theme(m3.$light-theme);
+    @include mat.all-component-themes(m3.$light-theme);
     @include mat.color-variants-backwards-compatibility(m3.$light-theme);
     @include mat.typography-hierarchy(m3.$light-theme, $back-compat: true);
     //@include custom-components-theme(m3.$light-theme, mat.get-theme-color(m3.$light-theme, error));
