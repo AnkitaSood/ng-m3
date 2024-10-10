@@ -186,3 +186,17 @@ $m2-dark-theme: mat.m2-define-dark-theme((
 ));
 
 
+@mixin dark-theme-overrides {
+  html {
+    background-color: #0f333d;
+    color: #C0EAF5;
+    --mat-app-background-color: #0f333d;
+    --mat-app-text-color: #C0EAF5;
+    --mdc-snackbar-supporting-text-color: #0b2124;
+    --mdc-elevated-card-container-color: #0a2027;
+    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette($m2-dark-theme, 100)};
+    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette($m2-dark-theme, 700)};
+    --mat-filled-button-hover-state-layer-opacity: 0;
+  }
+}
+

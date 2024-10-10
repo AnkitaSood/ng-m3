@@ -6,6 +6,7 @@
 @use "./examples/notification-banner/notifications.component.theme" as notifications;
 
 @include mat.typography-hierarchy(t.$custom-typography);
+
 @mixin custom-components-theme($theme, $error, $success) {
   @include notifications.notifications-banner-theme($theme, $error, $success);
 }
@@ -14,36 +15,19 @@
   @include mat.core-theme(lt.$m2-light-theme);
   @include mat.all-component-themes(lt.$m2-light-theme);
   @include custom-components-theme(lt.$m2-light-theme, lt.$light-error, lt.$light-success);
-  html {
-    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
-    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
-  }
-  .mat-mdc-unelevated-button:not(:disabled):hover {
-    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
-    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
-  }
-
-  .mat-mdc-unelevated-button:not(:disabled).active {
-    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 700)};
-    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(lt.$light-primary, 100)};
-  }
-
 }
 
 @media (prefers-color-scheme: dark) {
+  @include mat.core-color(dt.$m2-dark-theme);
   @include mat.all-component-colors(dt.$m2-dark-theme);
+  @include mat.all-component-densities(dt.$m2-dark-theme);
+  @include mat.all-component-typographies(dt.$m2-dark-theme);
   @include custom-components-theme(dt.$m2-dark-theme, dt.$dark-error, dt.$dark-success);
-  html {
-    --mat-app-background-color: #0f333d;
-    --mat-app-text-color: #C0EAF5;
-    --mdc-filled-button-container-color: #{mat.m2-get-color-from-palette(dt.$m2-dark-theme, 100)};
-    --mdc-filled-button-label-text-color: #{mat.m2-get-color-from-palette(dt.$m2-dark-theme, 700)};
-    --mat-filled-button-hover-state-layer-opacity: 0;
-  }
-
+  @include dt.dark-theme-overrides;
 }
 
 
+/* Reset Styles*/
 html, body {
   height: 100%;
 }
