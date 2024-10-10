@@ -37,6 +37,4 @@ export class KeyValueComponent {
 
   `
 })
-export class KeyValueExampleComponent {
-
-}
+export class KeyValueExampleComponent {}

@@ -4,11 +4,12 @@
 @use "themes/dark-theme" as dt;
 @use "themes/typography" as t;
 @use "./examples/notification-banner/notifications.component.theme" as notifications;
-
+@use "./examples/key-value/key-value.component.theme" as kv;
 @include mat.typography-hierarchy(t.$custom-typography);
 
 @mixin custom-components-theme($theme, $error, $success) {
   @include notifications.notifications-banner-theme($theme, $error, $success);
+  @include kv.key-value-component-theme($theme);
 }
 
 @media (prefers-color-scheme: light) {
