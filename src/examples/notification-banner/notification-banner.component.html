@@ -1,16 +1,44 @@
 <div class="row">
   <button mat-stroked-button class="error" (click)="error()">Error</button>
-  <div class="mat-body-2">Error notification Snackbar</div>
+  <div> Error notification Snackbar</div>
 </div>
 <div class="row">
   <button mat-stroked-button class="warn" (click)="warn()">Warn</button>
-  <div class="mat-body-2">Warning Notification Snackbar</div>
+  <div>Warning Notification Snackbar</div>
 </div>
 <div class="row">
   <button mat-stroked-button class="info" (click)="info()">Info</button>
-  <div class="mat-body-2">Info Notification Snackbar</div>
+  <div>Info Notification Snackbar</div>
 </div>
 <div class="row">
   <button mat-stroked-button class="success" (click)="success()">Success</button>
-  <div class="mat-body-2">Success Notification Snackbar</div>
+  <div>Success Notification Snackbar</div>
 </div>
+
+<ng-template #errorTmpl>
+  <div class="snackbar-tmpl">
+    <mat-icon>error_outline</mat-icon>
+    <span> Error Notification Message</span>
+  </div>
+</ng-template>
+
+<ng-template #warnTmpl>
+  <div class="snackbar-tmpl">
+    <mat-icon>warning_amber</mat-icon>
+    <span> Warn Notification Message</span>
+  </div>
+</ng-template>
+
+<ng-template #infoTmpl>
+  <div class="snackbar-tmpl">
+    <mat-icon>info</mat-icon>
+    <span> Info Notification Message</span>
+  </div>
+</ng-template>
+
+<ng-template #successTmpl>
+  <div class="snackbar-tmpl">
+    <mat-icon>check</mat-icon>
+    <span> Success Notification Message</span>
+  </div>
+</ng-template>

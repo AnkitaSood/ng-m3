@@ -12,9 +12,10 @@ import {NgOptimizedImage} from "@angular/common";
 })
 export class AppComponent {
   demos = [
-    {link: 'notifications', label: 'Notifications'},
     {link: 'cards', label: 'Cards'},
-    {link: 'custom', label: 'Custom Key Value'}
+    {link: 'notifications', label: 'Notifications'},
+    {link: 'custom', label: 'Custom Key Value'},
+    // {link: 'address', label: 'Customer Address'}
   ];
   activeLink = this.demos[0].link;
 }

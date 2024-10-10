@@ -1,4 +1,4 @@
-import { Injectable, NgZone } from '@angular/core';
+import {Injectable, NgZone, TemplateRef} from '@angular/core';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -10,37 +10,37 @@ export class NotificationService {
     private readonly zone: NgZone
   ) {}
 
-  info(message: string) {
+  info(message: TemplateRef<Element>) {
     this.show(message, {
-      duration: 20000,
+      duration: 10000,
       panelClass: 'info'
     });
   }
 
-  success(message: string) {
+  success(message: TemplateRef<Element>) {
     this.show(message, {
-      duration: 20000,
+      duration: 10000,
       panelClass: 'success'
     });
   }
 
-  warn(message: string) {
+  warn(message: TemplateRef<Element>) {
     this.show(message, {
-      duration: 20000,
+      duration: 10000,
       panelClass: 'warn'
     });
   }
 
-  error(message: string) {
+  error(message: TemplateRef<Element>) {
     this.show(message, {
-      duration: 20000,
+      duration: 10000,
       panelClass: 'error'
     });
   }
 
-  private show(message: string, configuration: MatSnackBarConfig) {
+  private show(message: TemplateRef<Element>, configuration: MatSnackBarConfig) {
     // Need to open snackBar from Angular zone to prevent issues with its position per
     // https://stackoverflow.com/questions/50101912/snackbar-position-wrong-when-use-errorhandler-in-angular-5-and-material
-    this.zone.run(() => this.snackBar.open(message, undefined, configuration));
+    this.zone.run(() => this.snackBar.openFromTemplate(message, configuration));
   }
 }
