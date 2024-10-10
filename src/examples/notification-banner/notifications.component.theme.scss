@@ -1,30 +1,60 @@
 @use "@angular/material" as mat;
 
-@mixin notifications-banner-theme($theme, $error, $success) {
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
+@mixin notifications-banner-theme($theme, $error, $success: #008942) {
 
-  .error {
-    --mdc-outlined-button-outline-color: #{mat.m2-get-color-from-palette($error)};
-    --mdc-outlined-button-label-text-color: #{mat.m2-get-color-from-palette($error)};
-    --mdc-snackbar-container-color: #{mat.m2-get-color-from-palette($error)};
+  // The function will return 0 for an M2 theme or 1 for an M3 theme
+  //@debug mat.get-theme-version($theme);
+
+  @if (mat.get-theme-version($theme) == 1) {
+
+    .error {
+      --mdc-outlined-button-outline-color: #{mat.get-theme-color($theme, error)};
+      --mdc-outlined-button-label-text-color: #{mat.get-theme-color($theme, error)};
+      --mdc-snackbar-container-color: #{mat.get-theme-color($theme, error)};
+    }
+    .info {
+      --mdc-outlined-button-outline-color: #{mat.get-theme-color($theme, tertiary)};
+      --mdc-outlined-button-label-text-color: #{mat.get-theme-color($theme, tertiary)};
+      --mdc-snackbar-container-color: #{mat.get-theme-color($theme, tertiary)};
+    }
+
+    .success {
+      --mdc-outlined-button-outline-color: #{$success};
+      --mdc-outlined-button-label-text-color: #{$success};
+      --mdc-snackbar-container-color: #{$success};
+    }
+    .warn {
+      --mdc-outlined-button-outline-color: #{mat.get-theme-color($theme, error, 60)};
+      --mdc-outlined-button-label-text-color: #{mat.get-theme-color($theme, error, 60)};
+      --mdc-snackbar-container-color: #{mat.get-theme-color($theme, error, 60)};
+    }
   }
+  @else {
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
 
-  .info {
-    --mdc-outlined-button-outline-color: #{mat.m2-get-color-from-palette($accent)};
-    --mdc-outlined-button-label-text-color: #{mat.m2-get-color-from-palette($accent)};
-    --mdc-snackbar-container-color: #{mat.m2-get-color-from-palette($accent)};
-  }
+    .error {
+      --mdc-outlined-button-outline-color: #{mat.m2-get-color-from-palette($error)};
+      --mdc-outlined-button-label-text-color: #{mat.m2-get-color-from-palette($error)};
+      --mdc-snackbar-container-color: #{mat.m2-get-color-from-palette($error)};
+    }
 
-  .success {
-    --mdc-outlined-button-outline-color: #{mat.m2-get-color-from-palette($success)};
-    --mdc-outlined-button-label-text-color: #{mat.m2-get-color-from-palette($success)};
-    --mdc-snackbar-container-color: #{mat.m2-get-color-from-palette($success)};
-  }
+    .info {
+      --mdc-outlined-button-outline-color: #{mat.m2-get-color-from-palette($accent)};
+      --mdc-outlined-button-label-text-color: #{mat.m2-get-color-from-palette($accent)};
+      --mdc-snackbar-container-color: #{mat.m2-get-color-from-palette($accent)};
+    }
 
-  .warn {
-    --mdc-outlined-button-outline-color: #{mat.m2-get-color-from-palette($warn)};
-    --mdc-outlined-button-label-text-color: #{mat.m2-get-color-from-palette($warn)};
-    --mdc-snackbar-container-color: #{mat.m2-get-color-from-palette($warn)};
+    .success {
+      --mdc-outlined-button-outline-color: #{mat.m2-get-color-from-palette($success)};
+      --mdc-outlined-button-label-text-color: #{mat.m2-get-color-from-palette($success)};
+      --mdc-snackbar-container-color: #{mat.m2-get-color-from-palette($success)};
+    }
+
+    .warn {
+      --mdc-outlined-button-outline-color: #{mat.m2-get-color-from-palette($warn)};
+      --mdc-outlined-button-label-text-color: #{mat.m2-get-color-from-palette($warn)};
+      --mdc-snackbar-container-color: #{mat.m2-get-color-from-palette($warn)};
+    }
   }
 }
